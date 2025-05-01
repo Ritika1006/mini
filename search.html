@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search - Spotify</title>
+    <link rel="stylesheet" href="spotify.css">
+    <style>
+        .search-box {
+            margin: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            width: 50%;
+            border-radius: 25px;
+            border: none;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .search-results {
+            margin: 30px;
+            color: white;
+        }
+
+        .card {
+            background-color: #2a2a2a;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+            display: inline-block;
+            width: 200px;
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .card-title {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body style="background-color: #121212;">
+    <div class="search-box">
+        <input type="text" placeholder="Search for songs, artists, albums..." />
+    </div>
+
+    <div class="search-results">
+        <h2>Popular Searches</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="C:\Users\Ritesh\Pictures\Screenshots\kesriya.png" alt="Song Image">
+                <h3 class="card-title">Kesariya</h3>
+                <p class="card-info">Arijit Singh</p>
+            </div>
+            <div class="card">
+                <img src="C:\Users\Ritesh\Pictures\Screenshots\tera.png" alt="Song Image">
+                <h3 class="card-title">Tera Yaar Hoon Main</h3>
+                <p class="card-info">Arijit Singh</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Playlist - Spotify</title>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    font-family: 'Arial', sans-serif;
+    color: white;
+}
+
+/* Header title */
+h1 {
+    font-size: 28px;
+    padding: 20px;
+    margin: 0;
+    color: #fff;
+}
+
+/* Card container layout */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Card styling */
+.card {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    padding: 15px;
+    width: 200px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Image inside card */
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Song title */
+.card-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Song info (artist name) */
+.card-info {
+    font-size: 14px;
+    color: #b3b3b3;
+}
+</style>
+</head>
+<body>
+    <div class="main">
+        <h1>My Playlist</h1>
+        <div class="card-container">
+            <div class="card">
+                 <img class="image" src="C:\Users\Ritesh\Pictures\Screenshots\tujh.png" alt="Song Image">
+                <h3 class="card-title">Tujh Mein Rab Dikhta Hai</h3>
+                <p class="card-info">Roop Kumar Rathod</p>
+            </div>
+            <div class="card">
+                <img class="image" src="C:\Users\Ritesh\Pictures\Screenshots\tum.png" alt="Song Image">
+                <h3 class="card-title">Tum Hi Ho</h3>
+                <p class="card-info">Arijit Singh</p>
+            </div>
+            <!-- Add more songs as needed -->
+        </div>
+    </div>
+</body>
+</html>
