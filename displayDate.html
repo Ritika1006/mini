@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Display Date Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+
+    input[type="text"] {
+      width: 300px;
+      padding: 8px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Display Current Date in Textbox</h2>
+
+  <input type="text" id="dateBox" readonly>
+  <br><br>
+  <button onclick="showDate()">Display Date</button>
+
+  <script>
+    function showDate() {
+      const today = new Date();
+      const formattedDate = today.toLocaleDateString();  // e.g., 5/17/2025
+      document.getElementById("dateBox").value = formattedDate;
+    }
+  </script>
+
+</body>
+</html>

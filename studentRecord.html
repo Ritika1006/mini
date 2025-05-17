@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Record Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
+      max-width: 350px;
+    }
+
+    label {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input[type="text"], select {
+      width: 100%;
+      padding: 8px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-top: 4px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Student Record Form</h2>
+  <form id="studentForm" onsubmit="return validateForm()">
+    
+    <div class="form-group">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name">
+      <div class="error" id="nameError"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="roll">Roll Number:</label>
+      <input type="text" id="roll">
+      <div class="error" id="rollError"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="text" id="email">
+      <div class="error" id="emailError"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="age">Age:</label>
+      <input type="text" id="age">
+      <div class="error" id="ageError"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="course">Course:</label>
+      <select id="course">
+        <option value="">Select Course</option>
+        <option value="MCA">MCA</option>
+        <option value="MBA">MBA</option>
+        <option value="B.Tech">B.Tech</option>
+        <option value="BCA">BCA</option>
+      </select>
+      <div class="error" id="courseError"></div>
+    </div>
+
+    <button type="submit">Submit</button>
+
+  </form>
+
+  <script>
+    function validateForm() {
+      let isValid = true;
+      document.querySelectorAll('.error').forEach(el => el.textContent = '');
+
+      const name = document.getElementById('name').value.trim();
+      const roll = document.getElementById('roll').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const age = document.getElementById('age').value.trim();
+      const course = document.getElementById('course').value;
+
+      if (name === "") {
+        document.getElementById('nameError').textContent = "Name is required.";
+        isValid = false;
+      }
+
+      if (roll === "" || isNaN(roll)) {
+        document.getElementById('rollError').textContent = "Valid roll number is required.";
+        isValid = false;
+      }
+
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      if (!emailPattern.test(email)) {
+        document.getElementById('emailError').textContent = "Enter a valid email.";
+        isValid = false;
+      }
+
+      if (age === "" || isNaN(age) || age < 16 || age > 100) {
+        document.getElementById('ageError').textContent = "Enter a valid age (16–100).";
+        isValid = false;
+      }
+
+      if (course === "") {
+        document.getElementById('courseError').textContent = "Please select a course.";
+        isValid = false;
+      }
+
+      return isValid;
+    }
+  </script>
+
+</body>
+</html>

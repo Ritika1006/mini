@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My CV</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    .cv-container {
+      max-width: 800px;
+      background: #fff;
+      padding: 20px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 15px;
+      background-color: #2ecc71;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #27ae60;
+    }
+    #extra-info {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="cv-container">
+    <h1>Ritika Gupta</h1>
+    <p><strong>Email:</strong> ritika@example.com</p>
+    <p><strong>Phone:</strong> +91-XXXXXXXXXX</p>
+
+    <div class="section">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>MCA</strong>, GL Bajaj Institute of Technology and Management, Greater Noida (2024-2026)</li>
+        <li><strong>BCA</strong>, Technical Education and Research Institute, Ghazipur (2021-2024)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Skills</h2>
+      <ul>
+        <li>Java, C</li>
+        <li>HTML, CSS</li>
+
+        <li>MySQL, DBMS</li>
+	</ul>
+	<ul>
+        <li>Cloud Computing & Cyber Security (Interest)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Experience</h2>
+      <p>Currently a student, actively working on Java and Web development projects.</p>
+    </div>
+
+    <div class="section">
+      <h2>Projects</h2>
+      <ul>
+        <li>Onlin Challan Generation and Payment System</li>
+        <li>Clone-project- Spotify page</li>
+	<li>Clone-project- Course Registration</li>
+      </ul>
+    </div>
+
+   
+ <button onclick="toggleExtra()">Toggle More Info</button>
+    <div id="extra-info" class="section">
+      <h2>Achievements</h2>
+      <ul>
+        <li>Gold Medalist in BCA – Awarded by Governor Mrs. Anandiben Patel</li>
+        <li>Topper in college – 3 consecutive semesters</li>
+      </ul>
+
+      <h2>Languages</h2>
+      <p>Hindi, English</p>
+    </div>
+  </div>
+
+  <script>
+    function toggleExtra() {
+      const info = document.getElementById("extra-info");
+      if (info.style.display === "none") {
+        info.style.display = "block";
+      } else {
+        info.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>
